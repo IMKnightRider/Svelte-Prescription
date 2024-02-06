@@ -1,0 +1,13 @@
+
+ h1 {
+      text-align: center;
+    }
+.discription{
+    text-align: center;
+    padding: 12px;
+    height: 250px;
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  

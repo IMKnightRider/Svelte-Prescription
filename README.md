@@ -1,27 +1,6 @@
-# create-svelte
+# or start the server and open the app in a new browser tab use Node js Latest Version Please
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+npm install
 npm run dev -- --open
 ```
 
@@ -36,3 +15,19 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## List of Technology / Software / Languages Used 
+- We have used Sevltekit Which is Js Framework We have used it beacuse it makes our work easy and We can reuse html components it also gives better performance to website
+- We have use Software Like Vs code for coding We have also Uploaded this to Github using git 
+
+## Features of Application
+- We have an Home page , Login Page which is for doctor who wants to give prescription you have to login first to give prescription
+- You can't Reload Login Page Because we Have restricted it 
+- After Login as Doctor you can create a prescription for your patient with prescription id that must be unique
+- We have added feature for checking Prescribed id You have to use it for checking prescription is valid or not
+- We have added Double clicked feature on Navbar for old age people if you double clicked a link on navbar it will chang color to black and appear border on that page
+
+## Details of Members
+- Shubham Poddar Email: sp321418@gmail.com
+- Prem Kumar Email: kumarp73616@gmail.com
+- Khushi Mandal Email: 2305kasl@gmail.com
+
