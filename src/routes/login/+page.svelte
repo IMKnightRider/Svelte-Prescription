@@ -2,7 +2,6 @@
   // @ts-nocheck
   let doc;
     import { onMount } from "svelte";
-    import { goto } from '$app/navigation';
 
   import "../../global.css"; // This is Global css file which is used for creating layout
   let docName; // Doctor name for binding
@@ -14,7 +13,7 @@
     doctors = [{ dname: name, dbio: bio, pass: pass }];
     localStorage.setItem("doctor", JSON.stringify(doctors));
     alert("You Have Logged in")
-    goto("/addPresc")
+    window.location.href = "/addPresc" 
   };
 
 onMount(()=>{

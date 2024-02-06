@@ -4,13 +4,20 @@
   /** @type {import('./$types').PageData} */
   let _id;
   let verify = "Please Write Id";
+  let medicine = []
+  let yes = false;
   $: if (_id) {
-    let a = JSON.parse(localStorage.getItem("presc")); // Prescription Array
-    for (let i = 0;i < a.length; i++) {
+     // Prescription Array
+    let a = JSON.parse(localStorage.getItem("presc"))
+    for (let i = 0; i < a.length; i++) {
       if (_id == a[i]["_id"]) {
         verify = "This is Verfied";
+        yes = true;
+        medicine = a[i]["medic"]
+        console.log(medicine)
         break;
-      } else {
+      } else
+        yes = false;
         verify = "Not Verified";
       }
     }
@@ -32,6 +39,30 @@
       bind:value={_id}
     />
   </div>
+
+  {#if yes}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Dose</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each medicine as medicine, i}
+        <tr>
+        <th scope="row">{i+1}</th>
+        <td>{medicine.name}</td>
+        <td>{medicine.quantity}</td>
+        <td>{medicine.dose}</td>
+      </tr>
+      {/each}
+      
+    </tbody>
+  </table>
+  {/if}
 
   <h2>{verify}</h2>
 </div>

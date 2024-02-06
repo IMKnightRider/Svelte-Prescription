@@ -1,7 +1,7 @@
 # or start the server and open the app in a new browser tab use Node js Latest Version Please
 
-npm install
-npm run dev -- --open
+`npm install` for Installing Dependencies
+`npm run dev -- --open` for For Opening the Development App
 ```
 
 ## Building

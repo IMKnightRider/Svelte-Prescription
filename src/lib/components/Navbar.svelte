@@ -1,7 +1,7 @@
 <script>
-// @ts-nocheck
+  // @ts-nocheck
 
-    import { onMount } from "svelte";
+  import { onMount } from "svelte";
 
   // @ts-nocheck
 
@@ -11,10 +11,10 @@
   let add = false;
   let ch = false;
   let doc;
-  $: newDoc= !doc;
-  onMount(()=>{
-    doc = (JSON.parse(localStorage.getItem("doctor")) == null) ? true : false 
-  })
+  $: newDoc = !doc;
+  onMount(() => {
+    doc = JSON.parse(localStorage.getItem("doctor")) == null ? true : false;
+  });
   $: makeActivLogin = () => {
     home = false;
     login = true;
@@ -40,6 +40,7 @@
     ch = false;
   };
 </script>
+
 <!-- On:click is the function in svelte same as onclick in html -->
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -53,19 +54,21 @@
   </li>
   <li class="nav-item">
     <!-- svelte-ignore missing-declaration -->
-    <a class="nav-link {login ? a : ''}" on:click={makeActivLogin} href="/login" 
+    <a class="nav-link {login ? a : ''}" on:click={makeActivLogin} href="/login"
       >Login as Doctor</a
     >
   </li>
   <!-- svelte-ignore missing-declaration -->
   {#if newDoc}
-  <li class="nav-item">
-    <a class="nav-link {add ? a : ''}" href="/addPresc" on:click={makeActiveAdd}
-      >Add Prescription</a
-    >
-  </li> 
- {:else}
-   {  ""}{/if}
+    <li class="nav-item">
+      <a
+        class="nav-link {add ? a : ''}"
+        href="/addPresc"
+        on:click={makeActiveAdd}>Add Prescription</a
+      >
+    </li>
+  {:else}
+    {""}{/if}
   <li class="nav-item">
     <!-- svelte-ignore missing-declaration -->
     <a
