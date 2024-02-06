@@ -16,7 +16,7 @@
         medicine = a[i]["medic"]
         console.log(medicine)
         break;
-      } else
+      } else {
         yes = false;
         verify = "Not Verified";
       }
